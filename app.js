@@ -1,6 +1,6 @@
 // Define the API endpoint and API key
 const endpoint = "https://api.example.com/galleries";
-const apiKey = "AAIzaSyBJOWpInhXmEfKj38L_q4uUzPjPLBRZX3U";
+const apiKey = "AIzaSyBJOWpInhXmEfKj38L_q4uUzPjPLBRZX3U";
 
 // Define the borough filter buttons
 const manhattanBtn = document.getElementById("manhattan-btn");
