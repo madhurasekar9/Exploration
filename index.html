@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleries accepting submissions in NYC</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>Galleries accepting submissions in NYC</h1>
+      <p>Find galleries that are currently accepting submissions from upcoming artists in Manhattan, Brooklyn and Queens</p>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="filter">
+        <h2>Filter by Borough:</h2>
+        <label>
+          <input type="radio" name="borough" value="manhattan" checked>
+          Manhattan
+        </label>
+        <label>
+          <input type="radio" name="borough" value="brooklyn">
+          Brooklyn
+        </label>
+        <label>
+          <input type="radio" name="borough" value="queens">
+          Queens
+        </label>
+      </div>
+      <div class="gallery-list">
+        <ul>
+          <!-- Gallery results will be dynamically populated here -->
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
