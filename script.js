@@ -1,6 +1,6 @@
 
 
-const apiKey = "AIzaSyBJOWpInhXmEfKj38L_q4uUzPjPLBRZX3U";
+const apiKey = "AIzaSyAbb4g0n7gb1bxtGL3cf1Wm9lvHsgZmGRM";
 const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=${apiKey}&query=galleries+in+nyc`;
 
 const galleryList = document.getElementById("gallery-list");
