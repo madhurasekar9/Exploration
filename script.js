@@ -1,51 +1,29 @@
-const apiKey = "AIzaSyAbb4g0n7gb1bxtGL3cf1Wm9lvHsgZmGRM";
-const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=${apiKey}&query=galleries+in+nyc`;
+const searchBar = document.getElementById('search-bar');
+const cards = document.querySelectorAll('.card');
 
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
-
-const galleryList = document.getElementById("gallery-list");
-const boroughFilter = document.getElementById("borough-filter");
-
-fetch(proxyurl+apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    const galleries = data.results.filter(result => {
-      return (
-        result.formatted_address.includes("Manhattan") ||
-        result.formatted_address.includes("Queens") ||
-        result.formatted_address.includes("Brooklyn")
-      );
-    });
-
-    galleries.forEach(gallery => {
-      const galleryItem = document.createElement("li");
-      galleryItem.innerHTML = `
-        <h3>${gallery.name}</h3>
-        <p>${gallery.formatted_address}</p>
-        <p>Rating: ${gallery.rating}/5</p>
-        <p>${gallery.types.join(", ")}</p>
-      `;
-      galleryList.appendChild(galleryItem);
-    });
-
-    boroughFilter.addEventListener("change", event => {
-      const selectedBorough = event.target.value;
-      galleryList.innerHTML = "";
-
-      galleries.forEach(gallery => {
-        if (gallery.formatted_address.includes(selectedBorough)) {
-          const galleryItem = document.createElement("li");
-          galleryItem.innerHTML = `
-            <h3>${gallery.name}</h3>
-            <p>${gallery.formatted_address}</p>
-            <p>Rating: ${gallery.rating}/5</p>
-            <p>${gallery.types.join(", ")}</p>
-          `;
-          galleryList.appendChild(galleryItem);
-        }
-      });
-    });
-  })
-  .catch(error => {
-    console.log(error);
+searchBar.addEventListener('keyup', (e) => {
+  const searchText = e.target.value.toLowerCase();
+  cards.forEach(card => {
+    const cardText = card.textContent.toLowerCase();
+    if (cardText.includes(searchText)) {
+      card.style.display = 'block';
+      if (card.id !== 'card-1') {
+        card.style.marginTop = '30px';
+      }
+    } else {
+      card.style.display = 'none';
+    }
   });
+});
+
+
+
+
+const colors = ['#f44336', '#2196f3', '#4caf50', '#ffc107'];
+let i = 0;
+
+setInterval(() => {
+  document.body.style.backgroundColor = colors[i];
+  i = (i + 1) % colors.length;
+}, 3000);
+
