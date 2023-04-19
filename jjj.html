@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualizer</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        #chart {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        circle:hover {
+            stroke: black;
+            stroke-width: 2px;
+        }
+        
+        .song-label {
+            position: absolute;
+            font-size: 12px;
+            z-index: 100;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+
+    <script>
+        // Define the data for the chart
+        var chartData = [
+            { genre: "Rock", song: "Stairway to Heaven", x: 50, y: 150 },
+            { genre: "Pop", song: "Billie Jean", x: 350, y: 50 },
+            { genre: "Hip-Hop", song: "California Love", x: 550, y: 300 },
+            { genre: "Country", song: "Jolene", x: 200, y: 450 },
+            { genre: "Jazz", song: "Take Five", x: 700, y: 200 },
+            { genre: "Rock", song: "Bohemian Rhapsody", x: 150, y: 350 },
+            { genre: "Pop", song: "Thriller", x: 50, y: 50 },
+            { genre: "Hip-Hop", song: "Juicy", x: 650, y: 400 },
+            { genre: "Country", song: "Achy Breaky Heart", x: 250, y: 250 },
+            { genre: "Jazz", song: "Birdland", x: 500, y: 150 },
+            { genre: "Rock", song: "Hotel California", x: 400, y: 300 },
+            { genre: "Pop", song: "Like a Virgin", x: 150, y: 50 },
+            { genre: "Hip-Hop", song: "The Message", x: 150, y: 300 },
+            { genre: "Country", song: "Folsom Prison Blues", x: 600, y: 50 },
+            { genre: "Jazz", song: "Giant Steps", x: 300, y: 150 }
+        ];
+
+        // Define the dimensions and margins for the chart
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var margin = { top: 50, right: 50, bottom: 50, left: 50 };
+
+        // Create the scales for the x and y axes
+        var xScale = d3.scaleLinear()
+            .domain([0, width])
+            .range([margin.left, width - margin.right]);
+
+        var yScale = d3.scaleLinear()
+            .domain([0, height])
+            .range([height - margin.bottom, margin.top]);
+
+        // Create the chart using D3.js
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var circles = svg.selectAll("circle")
+            .data(chartData)
+           
+</script>
+
+
+
+<div class="card" id="card-2">
+    <h2>Museum of Modern Art</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@moma.org.</p>
+    <a href="https://www.moma.org/">https://www.moma.org/</a>
+  </div>
+  <div class="card" id="card-3">
+    <h2>Whitney Museum of American Art</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@whitney.org.</p>
+    <a href="https://whitney.org/">https://whitney.org/</a>
+  </div>
+  <div class="card" id="card-4">
+    <h2>The Guggenheim</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@guggenheim.org.</p>
+    <a href="https://www.guggenheim.org/">https://www.guggenheim.org/</a>
+  </div>
+  <div class="card" id="card-5">
+    <h2>The Frick Collection</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@frick.org.</p>
+    <a href="https://www.frick.org/">https://www.frick.org/</a>
+  </div>
+  <div class="card" id="card-6">
+    <h2>The Morgan Library & Museum</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@morganlibrary.org.</p>
+    <a href="https://www.themorgan.org/">https://www.themorgan.org/</a>
+  </div>
+  <div class="card" id="card-7">
+    <h2>The New Museum of Contemporary Art</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@newmuseum.org.</p>
+    <a href="https://www.newmuseum.org/">https://www.newmuseum.org/</a>
+  </div>
+  <div class="card" id="card-8">
+    <h2>The Brooklyn Museum</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@brooklynmuseum.org.</p>
+    <a href="https://www.brooklynmuseum.org/">https://www.brooklynmuseum.org/</a>
+  </div>
+  <div class="card" id="card-9">
+    <h2>The Rubin Museum of Art</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@rubinmuseum.org.</p>
+    <a href="https://rubinmuseum.org/">https://rubinmuseum.org/</a>
+  </div>
+  <div class="card" id="card-10">
+    <h2>The International Center of Photography</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@icp.org.</p>
+    <a href="https://www.icp.org/">https://www.icp.org/</a>
+  </div>
+  <div class="card" id="card-11">
+    <h2>The American Museum of Natural History</h2>
+    <p>Submission Requirements: Submit images, artist statement, CV, and contact information to submissions@amnh.org.</p>
+    <a href="https://www.amnh.org/">https://www.amnh.org/</a>
+  </div>
