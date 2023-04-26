@@ -1,106 +1,236 @@
+body{
+  overflow-x: hidden;
+  font-family: 'Raleway';
+  background-color: #F1F1ED;
+}
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-body {
-  font-family: Arial, sans-serif;
+/* Set full height for hero section */
+.hero {
+  height: 100vh;
+  position: relative;
+}
 
-  color: #fff;
-  line-height: 1;
-    background-color: #333;
-    transition: background-color 1s ease-in-out;
-  }
+/* Set image to cover 55% of hero section */
+.hero img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+}
 
-  header h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
-    letter-spacing: 1px;
+/* Set hero content to left align below the image */
+.hero-content {
+  position: absolute;
+  top: 60vh;
+  left: 0;
+  width: 100%;
+  margin-left: 3%;
+}
+
+/* Style heading and subheading */
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 1rem;
+  color: #000;
+  width: 40%;
+  font-weight: 300;
+  line-height: 150%;}
+
+
+  .card {
+    display: flex;
+    margin: auto;
     align-items: center;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    line-height: 130%;
+    height: 40vh;
+    width: 95%;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-bottom: 30px;
+
   }
   
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  /* Set image div to be 100% width on smaller screens */
+  .card-image {
+    width: 30%;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    
+  }
+  
+  /* Set content div to take up remaining space and align content to center */
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 1rem;
+    margin-left: 3em;
+  }
+  
+  .card-content h2 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #000;
+    width: 70%;
+    font-weight: 300;
+    line-height: 150%;}
+
+  
+  /* Set arrow div to have fixed size and center arrow image */
+  .card-arrow {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-right: 6em;
+
+  }
+  
+  .card-arrow img {
+    width: 100px;
+    height: 100px;
+  }
+  
+ 
+  
+  
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  /* Set hero section to stack on smaller screens */
+  
+  body{
+    overflow-x: hidden;}
+  .hero {
+    height: auto;
+  }
+
+  /* Set hero image to take up full width and height */
+  .hero img {
+    height: auto;
+  }
+
+  /* Center hero content on smaller screens */
+  .hero-content {
+    position: static;
+    margin-top: 30px;
+    text-align: left;
+    padding: 0;
+    margin-left: 5%;
+    width: 90%;
+  }
+  
+  /* Adjust heading and subheading font sizes for smaller screens */
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 0.8rem;
+    width: 80%;
+
+  }
 }
 
-header {
-  text-align: center;
-  margin-bottom: 30px;
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  
+  .card-image {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .card-content {
+    align-items: left;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .card-content h2 {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  
+  .card-content p {
+    font-size: 0.8rem;
+    width: 90%;
+    line-height: 150%;
+  }
+  
+  /* .card-arrow {
+    display: none;
+  } */
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 130%;
+/* For screens larger than 768px */
+@media screen and (max-width: 768px) {
+  .card {
+    height: auto;
+    width: 90%;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: auto;
+    padding-bottom: 1em ;
+  }
 
+  .card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .card-content {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .card-arrow {
+   
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+.card-arrow img {
+  width: 50px;
+  height: 50px;
 }
 
-.search-container {
-  margin-bottom: 30px;
-}
 
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-input[type="text"] {
-  width: 400px;
-  height: 40px;
-  padding: 5px;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  padding: 20px;
-  text-align: left;
-  transition: box-shadow 0.3s ease-in-out;
-  max-width: 600px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card h2 {
-  color: #333;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 130%;
-}
-
-.card p {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 130%;
-}
-
-.card a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-#list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1000px;
 }

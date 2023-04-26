@@ -16,14 +16,29 @@ searchBar.addEventListener('keyup', (e) => {
   });
 });
 
+// const searchInput = document.getElementById('search-input');
+// const cards = document.querySelectorAll('.card');
+
+// searchInput.addEventListener('input', () => {
+//   const searchValue = searchInput.value.trim().toLowerCase();
+  
+//   cards.forEach(card => {
+//     const name = card.getAttribute('data-name').toLowerCase();
+    
+//     if (name.includes(searchValue)) {
+//       card.style.display = 'block';
+//     } else {
+//       card.style.display = 'none';
+//     }
+//   });
+// });
 
 
+// const colors = ['#f44336', '#2196f3', '#4caf50', '#ffc107'];
+// let i = 0;
 
-const colors = ['#f44336', '#2196f3', '#4caf50', '#ffc107'];
-let i = 0;
-
-setInterval(() => {
-  document.body.style.backgroundColor = colors[i];
-  i = (i + 1) % colors.length;
-}, 3000);
+// setInterval(() => {
+//   document.body.style.backgroundColor = colors[i];
+//   i = (i + 1) % colors.length;
+// }, 3000);
 
