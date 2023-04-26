@@ -16,23 +16,23 @@
 //   });
 // });
 
-// const searchInput = document.getElementById('search-input');
-// const cards = document.querySelectorAll('.card');
 
-// searchInput.addEventListener('input', () => {
-//   const searchValue = searchInput.value.trim().toLowerCase();
-  
-//   cards.forEach(card => {
-//     const name = card.getAttribute('data-name').toLowerCase();
-    
-//     if (name.includes(searchValue)) {
-//       card.style.display = 'block';
-//     } else {
-//       card.style.display = 'none';
-//     }
-//   });
-// });
 
+
+
+
+  const searchInput = document.querySelector('#search-input');
+  const cards = document.querySelectorAll('.card');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+
+    cards.forEach((card) => {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      const match = title.includes(query);
+      card.style.display = match ? 'block' : 'none';
+    });
+  });
 
 
 
