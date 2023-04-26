@@ -177,21 +177,23 @@ body{
     width: 80%;
 
   }
-
+ 
   
-}
 
 @media (max-width: 767px) {
   .card {
     flex-direction: column;
     height: auto;
     margin-bottom: 1rem;
-    width: 90%;
+    width: 100%;
+      align-items: flex-end;
+    }
   }
   
   .card-image {
     width: 100%;
     margin-bottom: 1rem;
+
   }
   
   .card-content {
@@ -246,13 +248,14 @@ body{
 
   .card-arrow {
    
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
 }
 .card-arrow img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 
