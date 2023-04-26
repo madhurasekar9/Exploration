@@ -10,6 +10,14 @@ body{
   overflow-x: hidden;
 }
 
+.searchable-card {
+  display: block;
+}
+
+.searchable-card.hide {
+  display: none;
+}
+
 .mainb{
   margin-top: 5%;
 

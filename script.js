@@ -19,20 +19,22 @@
 
 
 
-
-
-  const searchInput = document.querySelector('#search-input');
-  const cards = document.querySelectorAll('.card');
-
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-
-    cards.forEach((card) => {
-      const title = card.querySelector('h2').textContent.toLowerCase();
-      const match = title.includes(query);
-      card.style.display = match ? 'block' : 'none';
-    });
-  });
+// function myFunction() {
+//   var input, filter, cards, cardContainer, h4, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   cardContainer = document.getElementsByClassName("row")[0];
+//   cards = cardContainer.getElementsByClassName("searchable-card");
+//   for (i = 0; i < cards.length; i++) {
+//     h4 = cards[i].getElementsByClassName("card-content")[0].getElementsByTagName("h4")[0];
+//     txtValue = h4.textContent || h4.innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       cards[i].classList.remove("hide");
+//     } else {
+//       cards[i].classList.add("hide");
+//     }
+//   }
+// }
 
 
 
