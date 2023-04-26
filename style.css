@@ -10,6 +10,11 @@ body{
   overflow-x: hidden;
 }
 
+.mainb{
+  margin-top: 5%;
+
+}
+
 /* Set full height for hero section */
 .hero {
   height: 100vh;
@@ -120,7 +125,16 @@ body{
     height: 100px;
   }
   
- 
+  footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
   
   
 
@@ -133,7 +147,10 @@ body{
   .hero {
     height: auto;
   }
-
+  .mainc{
+    margin-bottom: 5%;
+  
+  }
   /* Set hero image to take up full width and height */
   .hero img {
     height: auto;
@@ -160,6 +177,8 @@ body{
     width: 80%;
 
   }
+
+  
 }
 
 @media (max-width: 767px) {
@@ -199,6 +218,11 @@ body{
 
 /* For screens larger than 768px */
 @media screen and (max-width: 768px) {
+  .mainc{
+    margin-bottom: 5%;
+  
+  }
+  
   .card {
     height: auto;
     width: 90%;
